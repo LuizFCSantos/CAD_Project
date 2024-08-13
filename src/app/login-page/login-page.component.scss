@@ -1,0 +1,105 @@
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login{
+    background-color: red;
+    width: 400px;
+    height: 500px;
+    border-radius: 100px 0 100px 0;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+// FORM
+
+h3{
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 300;
+}
+
+.form{
+    height: 10px;
+}
+
+// INPUT
+
+.input-container {
+    position: relative;
+    margin: 20px;
+   
+  }
+  
+  .input-field {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    background-color: transparent;
+  }
+  
+  .input-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 16px;
+    color: rgba(204, 204, 204, 0);
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+  
+  .input-highlight {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: #007bff;
+    transition: all 0.3s ease;
+  }
+  
+  .input-field:focus + .input-label {
+    top: -10px;
+    font-size: 12px;
+    color: #ffffff;
+  }
+  
+  .input-field:focus + .input-label + .input-highlight {
+    width: 100%;
+  }
+
+//   BOTÃO
+
+.btn {
+    position: relative;
+    font-size: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1em 2.5em;
+    display: inline-block;
+    border-radius: 1em;
+    transition: all .2s;
+    border: none;
+    font-family: inherit;
+    font-weight: 500;
+    color: black;
+    background-color: white;
+   }
+   
+   .btn:hover {
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+   }
+   
+  
