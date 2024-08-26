@@ -9,4 +9,16 @@ import { Component } from '@angular/core';
 })
 export class CalculadoraPageComponent {
 
+  sideClass = ["side-bar","side-bar-class"]
+
+  sizeClass = 1
+
+  abriEfecharSideBar(value: boolean){
+    if(value){
+      this.sizeClass = this.sizeClass + 1
+    }else{
+      this.sizeClass = this.sizeClass - 1
+    }
+  }
+
 }
