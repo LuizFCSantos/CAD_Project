@@ -18,28 +18,29 @@ main{
     padding: 0 5%;
 }
 
-.box-right{
+.form{
+  width: 100%;
+  height: 450px;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 270px 270px;
+  align-items: center;
+  justify-items: center;
+}
+
+.box-left{
     background-color: red;
     width: 55%;
-    height: 80%;
+    height: 100%;
     display: grid;
-    grid-template-rows: 550px;
     align-items: center;
     justify-content: center;
 }
 
-.form{
-    height: 90%;
-    display: grid;
-    grid-template-columns: 250px 250px;
-    justify-content: center;
-    align-items: center;
-}
-
-.artigo{
+.box-right{
     background-color: aqua;
-    width: 40%;
-    height: 80%;
+    width: 40%; 
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,65 +49,99 @@ main{
 // INPUT
 
 .coolinput {
-    display: flex;
-    flex-direction: column;
-    width: fit-content;
-    position: static;
-    max-width: 240px;
-  }
-  
-  .coolinput label.text {
-    font-size: 0.75rem;
-    color: #818CF8;
-    font-weight: 700;
-    position: relative;
-    top: 0.5rem;
-    margin: 0 0 0 7px;
-    padding: 0 3px;
-    background: #e8e8e8;
-    width: fit-content;
-  }
-  
-  .coolinput input[type=text].input {
-    padding: 11px 20px;
-    font-size: 0.75rem;
-    border: 2px #818CF8 solid;
-    border-radius: 5px;
-    background: #e8e8e8;
-  }
-  
-  .coolinput input[type=text].input:focus {
-    outline: none;
-  }
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  position: static;
+  max-width: 240px;
+}
 
-//    BOTÃO
-   .buttons{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20%;
-   }
+.coolinput label.text {
+  font-size: 0.75rem;
+  color: #818CF8;
+  font-weight: 700;
+  position: relative;
+  top: 0.5rem;
+  margin: 0 0 0 7px;
+  padding: 0 3px;
+  background: #e8e8e8;
+  width: fit-content;
+}
 
-   .btn{
-    width: 100px;
-    height: 30px;
-    border: solid 1px rgb(255, 255, 255);
-    color: #e8e8e8;
-    background-color: transparent;
-    border-radius: 10px;
-    transition: 0.2s ease;
-    display: flex;
-    align-items: center;
+.coolinput input[type=text].input {
+  padding: 11px 10px;
+  font-size: 0.75rem;
+  border: 2px #818CF8 solid;
+  border-radius: 5px;
+  background: #e8e8e8;
+}
+
+.coolinput input[type=text].input:focus {
+  outline: none;
+}
+
+// BUTTONS
+
+.buttons{
+  width: 100%;
+  height: 50px;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn{
+  padding: 20px;
+  height: 45px;
+  border: solid 1px white;
+  color: white;
+  background-color: transparent;
+  border-radius: 10px;
+  transition: 0.2s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn:hover{
+  transform: translateY(-3px) scale(1.1);
+}
+
+.group-text{
+  display: flex;
+}
+.group-icon{
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  .form{
+    grid-template-columns: 220px 220px;
+}
+}
+@media (max-width: 950px) {
+  .form{
+    grid-template-columns: 200px 200px;
+}
+}
+@media (max-width: 850px) {
+  .form{
+    grid-template-columns: 180px 180px;
+}
+}
+@media (max-width: 750px) {
+  .form{
+    display: block;
     justify-content: center;
-   }
-
-   .btn:hover{
-    transform: translateY(-3px) scale(1.1);
-   }
-
-
-   // RESPONSIVIDADE 
-
-   @media (max-width: 900px) {
-
-   }
+    align-items: center;
+}
+.group-text{
+  display: none;
+}
+.group-icon{
+  display: flex;
+  padding: 0 20px;
+}
+}
