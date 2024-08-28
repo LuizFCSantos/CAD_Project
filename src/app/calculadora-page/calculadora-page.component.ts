@@ -9,15 +9,17 @@ import { Component } from '@angular/core';
 })
 export class CalculadoraPageComponent {
 
-  sideClass = ["side-bar","side-bar-class"]
+  openCloseSelect = ["descricao-select-close", "descricao-select"];
 
-  sizeClass = 1
+  arrowAnimation = ["arrow-icon", "arrow-icon-close"];
 
-  abriEfecharSideBar(value: boolean){
-    if(value){
-      this.sizeClass = this.sizeClass + 1
+  valueSelect = 0;
+
+  openSelect(){
+    if(this.valueSelect == 0){
+      this.valueSelect = this.valueSelect + 1;
     }else{
-      this.sizeClass = this.sizeClass - 1
+      this.valueSelect = this.valueSelect - 1;
     }
   }
 

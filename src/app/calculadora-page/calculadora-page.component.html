@@ -11,7 +11,25 @@
                 
                 <div class="coolinput">
                     <label for="input" class="text">Name:</label>
-                    <input type="text" placeholder="Write here..." name="input" class="input">
+                    <input type="date" placeholder="Write here..." name="input" class="input">
+                </div>
+                <div class="coolinput">
+                    <label for="input" class="text">Name:</label>
+                    <select name="" id="" class="input"></select>
+                </div>
+                
+                <div class="coolinput">
+                    <label for="input" class="text">Name:</label>
+                    <input type="date" placeholder="Write here..." name="input" class="input">
+                </div>
+                <div class="coolinput">
+                    <label for="input" class="text">Name:</label>
+                    <select name="" id="" class="input"></select>
+                </div>
+                
+                <div class="coolinput">
+                    <label for="input" class="text">Name:</label>
+                    <select name="" id="" class="input"></select>
                 </div>
                 <div class="coolinput">
                     <label for="input" class="text">Name:</label>
@@ -22,29 +40,15 @@
                     <label for="input" class="text">Name:</label>
                     <input type="text" placeholder="Write here..." name="input" class="input">
                 </div>
-                <div class="coolinput">
-                    <label for="input" class="text">Name:</label>
-                    <input type="text" placeholder="Write here..." name="input" class="input">
-                </div>
-                
-                <div class="coolinput">
-                    <label for="input" class="text">Name:</label>
-                    <input type="text" placeholder="Write here..." name="input" class="input">
-                </div>
-                <div class="coolinput">
-                    <label for="input" class="text">Name:</label>
-                    <input type="text" placeholder="Write here..." name="input" class="input">
-                </div>
-                
-                <div class="coolinput">
-                    <label for="input" class="text">Name:</label>
-                    <input type="text" placeholder="Write here..." name="input" class="input">
+                <div class="checkbox">
+                    <input type="checkbox" placeholder="Write here..." name="input" class="input">
+                    <label for="input" class="text"> Réu Primario</label>
                 </div>
                 
             </div>
             <div class="buttons">
                 <div class="group-text">
-                    <button class="btn">CADASTRO</button>
+                    <button class="btn">CALCULAR</button>
                     <button class="btn">LIMPAR</button>
                     <button class="btn">PDF</button>
                 </div>
@@ -53,14 +57,24 @@
                     <button class="btn"></button>
                     <button class="btn"></button>
                 </div>
-
             </div>
         </div>
 
         <div class="box-right">
-
+            <div class="artigo">
+                <div class="lei">
+                    <button (click)="openSelect()">
+                        <img src="https://cdn-icons-png.flaticon.com/512/60/60758.png" [classList]="arrowAnimation[valueSelect]">
+                    </button>
+                </div>
+                <div class="agravante">
+                    <div [classList]="openCloseSelect[valueSelect]">
+                        <div class="group-modal">
+                            <p>descrição sobre uma lei descrição</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
     </div>
-
 </main>
