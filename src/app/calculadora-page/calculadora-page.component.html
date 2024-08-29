@@ -5,43 +5,43 @@
             <div class="form">   
                 
                 <div class="coolinput">
-                    <label for="input" class="text">Name:</label>
-                    <input type="text" placeholder="Write here..." name="input" class="input">
+                    <label for="input" class="text">Nome do réu:</label>
+                    <input type="text" name="input" class="input">
                 </div>
                 
                 <div class="coolinput">
-                    <label for="input" class="text">Name:</label>
-                    <input type="date" placeholder="Write here..." name="input" class="input">
+                    <label for="input" class="text">Idade do réu:</label>
+                    <input type="date" name="input" class="date">
                 </div>
                 <div class="coolinput">
-                    <label for="input" class="text">Name:</label>
-                    <select name="" id="" class="input"></select>
-                </div>
-                
-                <div class="coolinput">
-                    <label for="input" class="text">Name:</label>
-                    <input type="date" placeholder="Write here..." name="input" class="input">
-                </div>
-                <div class="coolinput">
-                    <label for="input" class="text">Name:</label>
-                    <select name="" id="" class="input"></select>
+                    <label for="input" class="text">Crimes:</label>
+                    <select name="" id="" class="select"></select>
                 </div>
                 
                 <div class="coolinput">
-                    <label for="input" class="text">Name:</label>
-                    <select name="" id="" class="input"></select>
+                    <label for="input" class="text">Data do crime:</label>
+                    <input type="date" name="input" class="date">
                 </div>
                 <div class="coolinput">
-                    <label for="input" class="text">Name:</label>
-                    <input type="text" placeholder="Write here..." name="input" class="input">
+                    <label for="input" class="text">Atenuantes:</label>
+                    <select name="" id="" class="select"></select>
                 </div>
                 
                 <div class="coolinput">
-                    <label for="input" class="text">Name:</label>
-                    <input type="text" placeholder="Write here..." name="input" class="input">
+                    <label for="input" class="text">Agraventes:</label>
+                    <select name="" id="" class="select"></select>
+                </div>
+                <div class="coolinput">
+                    <label for="input" class="text">Multa:</label>
+                    <input type="text" name="input" class="input">
+                </div>
+                
+                <div class="coolinput">
+                    <label for="input" class="text">Pena:</label>
+                    <input type="text" name="input" class="input">
                 </div>
                 <div class="checkbox">
-                    <input type="checkbox" placeholder="Write here..." name="input" class="input">
+                    <input type="checkbox" name="input" class="input">
                     <label for="input" class="text"> Réu Primario</label>
                 </div>
                 
@@ -61,6 +61,7 @@
         </div>
 
         <div class="box-right">
+            <label class="crimes">CRIMES (ARTIGOS SELECIONADOS)</label>
             <div class="artigo">
                 <div class="lei">
                     <button (click)="openSelect()">
