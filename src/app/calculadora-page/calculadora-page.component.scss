@@ -36,7 +36,7 @@ main{
     width: 55%;
     height: 100%;
     display: grid;
-    grid-template-rows: 550px 10px;
+    grid-template-rows: 90% 10px;
     align-items: center;
     justify-content: center;
     grid-area: box-left;
@@ -136,9 +136,9 @@ main{
     justify-items: center;
     align-items: center;
     grid-template-areas: 
-      "box-right"
-      "box-left";
-    grid-template-rows: 300px 350px;
+      "box-left"
+      "box-right";
+    grid-template-rows: 50% 50%;
     grid-template-columns: 600px;
         .box-right{
           width: 100%;
@@ -158,13 +158,14 @@ main{
               }
         }
         .box-left{
-          grid-template-rows: 250px 80px;
-          grid-template-columns: 550px;
+          width: 100%;
+          grid-template-rows: 80% 20%;
+          grid-template-columns: 100%;
           .form{
             height: 100%;
             display: grid;
-            grid-template-columns: 181px 181px 181px;
-            grid-template-rows: 80px 80px 80px;
+            grid-template-columns: 33% 33% 33%;
+            grid-template-rows: 33% 33% 33%;
           }
         }
       }
