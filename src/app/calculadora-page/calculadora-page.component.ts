@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef, AfterViewInit} from '@angular/core';
 
 @Component({
   selector: 'app-calculadora-page',
@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   imports: [],
   templateUrl: './calculadora-page.component.html',
   styleUrl: './calculadora-page.component.scss'
+
 })
 export class CalculadoraPageComponent {
 
@@ -22,5 +23,6 @@ export class CalculadoraPageComponent {
       this.valueSelect = this.valueSelect - 1;
     }
   }
+
 
 }
