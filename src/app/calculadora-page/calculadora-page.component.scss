@@ -5,14 +5,26 @@ main{
     align-items: center;
     justify-content: center;
 }
+
+    // NAVBAR
+
+    .nav{
+      width: 100%;
+      height: 10%;
+      background-color: rgb(107, 0, 0);
+      position: fixed;
+      top: 0;
+    }
+
     // TELA DA CALCULADORA
     
 .content{
     background-color: rgb(252, 252, 252);
     width: 70%;
-    height: 90%;
+    height: 85%;
     display: flex;
-    position: absolute;
+    position: relative;
+    top: 5%;
     justify-content: space-between;
     align-items: center;
     padding: 0 5%;
@@ -21,64 +33,119 @@ main{
     box-shadow: 5px 15px 15px 0 rgba(0, 0, 0, 0.589);
 }
 
-.form{
-  width: 100%;
-  height: 450px;
-  background-color: transparent;
-  display: grid;
-  grid-template-columns: 270px 270px;
-  align-items: center;
-  justify-items: center;
-}
-
 .box-left{
     background-color: transparent;
     width: 55%;
     height: 100%;
     display: grid;
-    grid-template-rows: 90% 10px;
+    grid-template-columns: 100%;
+    grid-template-rows: 80% 20%;
     align-items: center;
     justify-content: center;
     grid-area: box-left;
 }
 
+.form{
+  width: 100%;
+  height: 450px;
+  background-color: transparent;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 23% 23% 23% 23% 7%;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+}
+
 // INPUT
 
-.coolinput {
-  display: flex;
-  flex-direction: column;
-  width: fit-content;
-  position: static;
-  max-width: 240px;
+.input {
+  position: relative;
+  margin: 50px auto;
+  width: 80%;
 }
 
-.coolinput input[type=text].input {
-  padding: 11px 10px;
-  font-size: 0.75rem;
+.input input[type="text"] {
+  font-size: 20px;
+  width: 100%;
   border: none;
-  border-radius: 5px;
-  background: #e8e8e8;
-}
-
-.coolinput input[type=text].input:focus {
+  border-bottom: 2px solid #747474;
+  padding: 5px 0;
+  background-color: transparent;
   outline: none;
 }
 
-.date{
-  padding: 11px 25px;
-  font-size: 0.75rem;
+.input input[type="date"] {
+  font-size: 20px;
+  width: 100%;
   border: none;
-  border-radius: 5px;
-  background: #e8e8e8;
+  border-bottom: 2px solid #747474;
+  padding: 5px 0;
+  background-color: transparent;
+  outline: none;
 }
 
 .select{
-  padding: 11px 70px;
-  font-size: 0.75rem;
+  font-size: 20px;
+  width: 100%;
   border: none;
-  border-radius: 5px;
-  background: #e8e8e8;
+  border-bottom: 2px solid #747474;
+  padding: 5px 0;
+  background-color: transparent;
+  outline: none;
 }
+
+.input .label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #383838;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.input input[type="text"]:focus ~ .label,
+.input input[type="text"]:valid ~ .label {
+  top: -20px;
+  font-size: 16px;
+  color: #1d1d1d;
+}
+
+.input input[type="date"]:focus ~ .label,
+.input input[type="date"]:valid ~ .label {
+  top: -20px;
+  font-size: 16px;
+  color: #1d1d1d;
+}
+
+.select:focus ~ .label,
+.select:valid ~ .label {
+  top: -20px;
+  font-size: 16px;
+  color: #1d1d1d;
+}
+
+.input .underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #5a0000;
+  transform: scaleX(0);
+  transition: all 0.3s ease;
+}
+
+.input input[type="text"]:focus ~ .underline,
+.input input[type="text"]:valid ~ .underline {
+  transform: scaleX(1);
+}
+
+.input input[type="date"]:focus ~ .underline,
+.input input[type="date"]:valid ~ .underline {
+  transform: scaleX(1);
+}
+
 
 // BUTTONS
 
@@ -92,7 +159,7 @@ main{
 }
 
 .btn{
-  padding: 20px;
+  padding: 3%;
   height: 45px;
   border: solid 1px transparent;
   color: white;
@@ -115,20 +182,15 @@ main{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 10%;
+  padding: 0 3%;
 }
 .group-icon{
   display: none;
 }
 
-@media (max-width: 1100px) {
-  .form{
-    grid-template-columns: 220px 220px;
-}
-}
 @media (max-width: 950px) {
   .form{
-    grid-template-columns: 200px 200px;
+    grid-template-columns: 90% 10%;
 }
   .content{
     display: grid;
@@ -139,7 +201,7 @@ main{
       "box-left"
       "box-right";
     grid-template-rows: 50% 50%;
-    grid-template-columns: 600px;
+    grid-template-columns: 100%;
         .box-right{
           width: 100%;
           text-align: center;
@@ -170,16 +232,12 @@ main{
         }
       }
 }
-@media (max-width: 850px) {
-  .form{
-    grid-template-columns: 180px 180px;
-}
-}
 @media (max-width: 750px) {
   .form{
     display: block;
     justify-content: center;
     align-items: center;
+    grid-template-columns: 33% 33% 33%;
   }
   .group-text{
     display: none;
@@ -192,7 +250,7 @@ main{
     padding: 0 15%;
   }
   .content{
-    grid-template-columns: 500px;
+    grid-template-columns: 100%;
   }
 }
 
